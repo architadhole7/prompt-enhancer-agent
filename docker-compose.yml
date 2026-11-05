@@ -1,0 +1,30 @@
+services:
+  backend:
+    image: promptenhancer-backend:1.0
+    build:
+      context: ./backend
+    env_file: .env            # key reaches the container at runtime only
+    environment:
+      PORT: "4000"
+    ports:
+      - "4000:4000"
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:4000/api/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 5s
+    restart: unless-stopped
+
+  frontend:
+    image: prompt-enhancer-frontend:1.0
+    build:
+      context: ./frontend
+      args:
+        VITE_API_URL: ""      # empty = same origin, nginx proxies /api to backend
+    ports:
+      - "3000:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
