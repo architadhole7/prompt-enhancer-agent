@@ -396,22 +396,6 @@ docker compose down
 
 ---
 
-## 13. Deployment (Production)
-
-- **Frontend (Vercel / Netlify)**: [TODO / Not Deployed]
-  - Root directory: `frontend`
-  - Build command: `npm run build`
-  - Output directory: `dist`
-  - Environment variable: `VITE_API_URL=https://<your-render-backend-url>`
-- **Backend (Render)**: [TODO / Not Deployed]
-  - Root directory: `backend`
-  - Build command: `npm install && npm run build`
-  - Start command: `npm start`
-  - Environment variables: Configure `LLM_API_KEY`, `CORS_ORIGIN=https://<your-frontend-url>`, `PORT=4000`.
-
----
-
-
 ## Sample Prompts
 
 Try the Prompt Enhancer Agent with these example prompts:
