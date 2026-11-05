@@ -411,14 +411,35 @@ docker compose down
 
 ---
 
-## 14. Example Prompts & Screenshots
 
-### Example Prompts and Results
-- [TODO: Run `develop a cafe website` and record summary result]
-- [TODO: Run `develop a website for railway ticket booking` and record summary result]
-- [TODO: Run `add online food ordering` using previous plan and record change log result]
+## Sample Prompts
 
-### Screenshots
-- [TODO: Attach screenshot of main input interface]
-- [TODO: Attach screenshot of 12-section enhanced output with before/after score]
-- [TODO: Attach screenshot of expanded agent steps inspection drawer]
+Try the Prompt Enhancer Agent with these example prompts:
+
+### 1. Portfolio Website
+> Build a personal portfolio website with an introduction, skills, projects, and contact information. Keep the MVP simple and responsive.
+
+### 2. E-commerce Platform
+> Build an e-commerce website where users can browse products, search by category, add items to a cart, and place orders.
+
+### 3. Library Management System
+> Create a library management system that allows librarians to manage books, track issued and returned books, and search for available books.
+
+### 4. Event Management Platform
+> Build an event management platform where organizers can create events, manage registrations, and view attendee details.
+
+### 5. Student Attendance System
+> Develop a student attendance management system where teachers can mark attendance, view attendance records, and generate monthly reports.
+
+### 6. Café Website
+> Build a café website where customers can explore the menu, check prices, view opening hours, and contact the café.
+
+### Experiment with Different Styles
+
+The agent supports three enhancement styles:
+
+- **Short:** Concise, implementation-focused plans.
+- **Detailed:** Comprehensive plans covering requirements, architecture, tasks, and risks.
+- **Technical:** More technically focused implementation plans.
+
+You can also provide a previous plan when requesting changes to an existing project.
